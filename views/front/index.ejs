@@ -1,0 +1,16 @@
+<h1 class="text-center">
+  <%= title %>
+</h1>
+
+<section>
+  <% if (todos) { %>
+    <!-- Variable exists and has a truthy value -->
+    <h2 class="text-center">Todos</h2>
+    <div class="flex flex-col justify-center items-center gap-2">
+
+      <% todos.forEach(function(todo){ %>
+        <div><%- todo.title %></div>
+        <% }); %>
+    </div>
+    <% } %>
+</section>
